@@ -78,6 +78,8 @@ li {
   nav#navbar {
     grid-area: navbar;
     position: fixed;
+    /*This might break the challenge but it looks better*/
+    margin-left: 10px;
   }
 
   main#main-doc {
