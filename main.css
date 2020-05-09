@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+header {
+  margin-top: 25px;
+}
+
+p {
+  margin: 25px 0 5px 0;
+}
+
+section li {
+  margin: 10px 0;
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: lower-roman;
+}
+
+code {
+  background-color: antiquewhite;
+  display: block;
+  padding: 25px 0;
+  margin: 10px 0;
+}
+
+/*Navagation*/
+.nav-link {
+  border: solid black 1px;
+  color: black;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  text-align: center;
+}
+
+li {
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+@media (max-width: 799px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "navbar", "mainContent";
+  }
+
+  #navbar {
+    margin: 0 5%;
+  }
+
+  #navbar header {
+    text-align: center;
+  }
+
+  #main-doc {
+    margin: 0 5%;
+  }
+}
+
+@media (min-width: 800px) {
+  div.container {
+    display: grid;
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-areas: "navbar mainContent";
+  }
+
+  nav#navbar {
+    grid-area: navbar;
+    position: fixed;
+  }
+
+  main#main-doc {
+    grid-area: mainContent;
+    margin-right: 5%;
+    max-width: 1200px;
+  }
+}
+
+/*The bad way to do it */
+@media (min-width: 5000px) {
+  /*Navagation*/
+  #navbar {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: aquamarine;
+  }
+
+  #main-doc {
+    margin-left: 330px;
+    width: calc(100% - 380px);
+  }
+
+  #main-section {
+    width: 80%;
+  }
+}
